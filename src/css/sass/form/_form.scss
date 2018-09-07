@@ -2,6 +2,50 @@
 ====== start forms style =======
 ======================*/
 
+form
+{
+	text-transform: capitalize;
+	.input
+	{
+		position: relative;
+	}
+	input[type='text']
+	{
+		padding: 10px;
+		width: 100%;
+		box-shadow: 0px 1px 1px #bbb inset;
+		border-radius: 15px;
+		border: 1px solid #bbb;
+		background-color: $white-color;
+		will-change: box-shadow, border;
+		transition: box-shadow 0.3s ease-in-out,
+					border 0.3 ease-in-out;
+		&:focus,
+		&:valid
+		{
+			box-shadow: 0 0 4px 0 $text-color, 0 1px 2px 0 #bbb;
+			border: 1px solid $text-color;
+			+ .placeholder
+			{
+				display: none;
+			}
+		}
+	}
+	.placeholder
+	{
+		position: absolute;
+		top: 10px;
+		#{left}: 10px;
+		color: #666;
+	}
+	.placeholder-icon
+	{
+	    position: absolute;
+	    top: 10px;
+	    #{right}: 10px;
+		color: #666;
+	}
+}
 /*======================
 ====== end forms style =======
 ======================*/

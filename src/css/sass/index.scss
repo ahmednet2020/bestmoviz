@@ -12,11 +12,12 @@ $dir:ltr;
 		'./components/typography';
 
 //module
-//@import './module/preload';
+@import './module/_module',
+		'./module/_fontAwesome';
 
 
 //layout
-//@import './layout/nav';
+@import './layout/Navbar';
 //form
 @import './form/form',
 		'./form/button';

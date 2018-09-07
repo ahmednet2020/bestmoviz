@@ -1,0 +1,63 @@
+nav
+{
+	padding: 1em 0;
+	background-color: #f9f9f9;
+	.container
+	{
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	}
+	form
+	{
+		width: 40%;
+		flex: 0 0 40%;
+	}
+	.navbar-brand
+	{
+		text-align: right;
+	}
+	.mobile-view
+	{
+		display: none;
+		justify-content: space-between;
+    	align-items: center;
+	}
+	.search-form-toggler,
+	.navbar-toggler
+	{
+		color: $text-color;
+		font-size: 1.5em;
+    	padding-right: 0.5em;
+	}
+}
+// style in mobile
+@include media($max_lg)
+{
+	nav
+	{
+		.btn-login
+		{
+			display: none;
+		}
+		form
+		{
+			width: 50%;
+			flex: 0 0 50%;
+		}
+	}
+}
+@include media($max_mid)
+{
+	nav
+	{
+		form
+		{
+			display: none;
+		}
+		.mobile-view
+		{
+			display: flex;
+		}
+	}
+}

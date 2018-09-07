@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { fromEvent } from 'rxjs';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import { fromEvent } from 'rxjs'
 
-class Index extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="index">
@@ -21,4 +21,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Home

@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 // import pages
-import Index from './js/pages/Index';
+import Navbar from './js/components/Navbar'
+import Home from './js/pages/Home'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Index />
+      	<Navbar />
+        <Home />
       </div>
     );
   }
 }
 
-export default App;
+export default App

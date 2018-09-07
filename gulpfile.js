@@ -14,6 +14,7 @@ gulp.task('copy', function () {
   return mergeStream(
     gulp.src('./src/assets/imgs/**/*').pipe(gulp.dest('./public/imgs/')),
     gulp.src('./src/assets/manifest.json').pipe(gulp.dest('./public/')),
+    gulp.src('./src/assets/fonts/**').pipe(gulp.dest('./public/fonts')),
     gulp.src('./src/assets/robots.txt').pipe(gulp.dest('./public/'))
   );
 });
@@ -43,8 +44,8 @@ gulp.task('html', () => {
 gulp.task('css', () => {
   return gulp.src('./src/css/sass/*.scss')
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass())
-    .on('error', plugins.sass.logError)
+    //{outputStyle: 'compressed'}
+    .pipe(plugins.sass().on('error',  plugins.sass.logError))
     .pipe(plugins.postcss([ autoprefixer({browsers: 'last 2 versions'}) ]))
     .pipe(plugins.sourcemaps.write('./maps'))
     .pipe(gulp.dest('./public/css/'));

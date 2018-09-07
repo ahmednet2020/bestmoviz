@@ -6,6 +6,37 @@ button
 	text-transform: inherit;
 	color: inherit;
 }
+.btn
+{
+	font-size: 1em;
+    text-transform: capitalize;
+    padding: 0.5em 1em;
+    line-height: 1;
+    border-radius: 5px;
+    display: inline-block;
+	transition: background 0.2s ease-in-out;
+
+}
+.btn-green
+{
+	background-color: $main-color2;
+	color: $white-color;
+	&:hover,
+	&:focus
+	{
+		background-color: rgba($main-color2, 0.8);
+	}
+}
+.btn-blue
+{
+	background-color: $main-color3;
+	color: $white-color;
+	&:hover,
+	&:focus
+	{
+		background-color: rgba($main-color3, 0.8);
+	}
+}
 /*======================
 ====== end buttons style =======
 ======================*/

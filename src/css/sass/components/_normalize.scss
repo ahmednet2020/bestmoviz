@@ -9,6 +9,11 @@
     padding:0;
     @include box-sizing();
 }
+html,
+body
+{
+    background-color: $white-color2;
+}
 img
 {
     max-width: 100%;
@@ -33,10 +38,6 @@ dl, ol, ul
     margin: 0;
     list-style:none;
 }
-form
-{
-     overflow: hidden;
-}
 span
 {
     vertical-align: middle;
@@ -51,9 +52,5 @@ figure
     position:relative;
     margin:0;
     padding:0;
-}
-.bg-main
-{
-    background-color: $main-color;      
 }
 /*=== end default style */
