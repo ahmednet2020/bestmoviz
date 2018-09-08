@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+
+import Menu from '../components/Menu'
 import { fromEvent } from 'rxjs'
 
 class Home extends Component {
   render() {
     return (
-      <div className="index">
-        welcome to bestmoviz
-      </div>
+      <main className='my-2'>
+        <div className='row m-0'>
+          <div className='col-12 col-md-2'>
+            <Menu />
+          </div>
+          <div className='col-12 col-md-10 col-lg-6'>
+            movizlist
+          </div>
+          <div className='col-12 col-lg-4 d-none d-lg-block'>
+            adv
+          </div>
+        </div>
+      </main>
     );
   }
   componentDidMount() {

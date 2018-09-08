@@ -1,0 +1,24 @@
+.menu
+{
+	border: 1px solid $border-color;
+	background-color: $white-color;
+	.menu-link
+	{
+	    display: inline-block;
+	    width: 100%;
+	    line-height: 1.5;
+		padding: 10px;
+	    text-transform: capitalize;
+	    border-bottom: 1px solid $border-color;
+	    color: $text-color;
+	    transition: border 0.2s ease-in;
+	    font-size: 1.2rem;
+	    &.active,
+	    &:hover,
+	    &:focus
+	    {
+	    	color: $main-color;
+	    	border-bottom: 2px solid $main-color;
+	    }
+	}
+}
