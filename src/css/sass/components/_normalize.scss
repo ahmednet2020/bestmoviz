@@ -53,4 +53,20 @@ figure
     margin:0;
     padding:0;
 }
+main
+{
+   margin-top: 70px;
+}
+@include media($max_mid)
+{
+    body
+    {
+        &.hiden-scroll
+        {
+            overflow: hidden;
+            height: 100%;
+            height: 100vh;
+        }
+    }
+}
 /*=== end default style */

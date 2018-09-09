@@ -7,9 +7,9 @@
 {
 	margin: 0;
 }
-.my-2
+.py-2
 {
-	margin: 1.5em 0;
+	padding: 1.5em 0;
 }
 .pr-1
 {
@@ -31,3 +31,21 @@
 {
 	color: $text-color;
 }
+.navbar-toggler-icon
+{
+	pointer-events: none;
+}
+// .navbar-toggler
+// {
+// 	&:after
+// 	{
+// 		content: "\f0c9";
+// 		display: inline-block;
+// 	    font: normal normal normal 14px/1 FontAwesome;
+// 	    font-size: inherit;
+// 	    text-rendering: auto;
+// 	    -webkit-font-smoothing: antialiased;
+// 	    -moz-osx-font-smoothing: grayscale;
+// 	    vertical-align: middle;
+// 	}
+// }

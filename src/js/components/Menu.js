@@ -4,8 +4,22 @@ export default function (props)
 {
 	return (
 		<aside>
-			<div className='menu'>
+			<div className='menu' id='Menu'>
 				<ul>
+					<li className='menu-toggle'>
+						<button className="navbar-toggler menu-link"
+								type="button" 
+								data-toggle="show" 
+								data-target=".menu"
+								aria-controls="Menu" 
+								aria-expanded="false" 
+								aria-label="Toggle navigation">
+								<span className='navbar-toggler-icon'>
+									<i className="fa fa-bars pr-1" aria-hidden="true"></i>
+								</span>
+								<span className='menu-name'>menu</span>
+						</button>
+					</li>
 					<li>
 						<a href='#!' className='menu-link active'>
 							<i className="fa fa-home pr-1" aria-hidden="true"></i>

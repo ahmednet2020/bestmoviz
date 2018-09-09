@@ -1,5 +1,9 @@
 .menu
 {
+	position: fixed;
+	top: auto;
+	#{left}: 15px;
+	z-index: 999;
 	border: 1px solid $border-color;
 	background-color: $white-color;
 	.menu-link
@@ -13,6 +17,7 @@
 	    color: $text-color;
 	    transition: border 0.2s ease-in;
 	    font-size: 1.2rem;
+	    text-align: center;
 	    &.active,
 	    &:hover,
 	    &:focus
@@ -20,5 +25,67 @@
 	    	color: $main-color;
 	    	border-bottom: 2px solid $main-color;
 	    }
+	}
+	.menu-name
+	{
+		display: none;
+		visibility: hidden;
+	}
+	&.show
+	{
+		#{right}: 50%;
+		.menu-link
+		{
+			text-align: left;
+		}
+		.menu-name
+		{
+			display: inline;
+			visibility: visible;
+		}
+	}
+}
+@include media($min_xlg)
+{
+	.menu
+	{
+		width: 14%;
+		.menu-link
+		{
+			text-align: left;
+		}
+		.menu-name
+		{
+			display: inline;
+			visibility: visible;
+		}
+		.menu-toggle
+		{
+			display: none;
+			visibility: hidden;
+		}
+	}
+}
+@include media($max_mid)
+{
+	.menu
+	{
+		display: none;
+		top: 65px;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: scroll;
+	    &.show
+	    {
+	    	display: block;
+	    }
+	    .menu-toggle
+		{
+			display: none;
+			visibility: hidden;
+		}
 	}
 }

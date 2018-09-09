@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 import Menu from '../components/Menu'
-import { fromEvent } from 'rxjs'
 
 class Home extends Component {
   render() {
     return (
-      <main className='my-2'>
+      <main className='py-2'>
         <div className='row m-0'>
           <div className='col-12 col-md-2'>
             <Menu />
@@ -21,15 +19,6 @@ class Home extends Component {
         </div>
       </main>
     );
-  }
-  componentDidMount() {
-    let appDom = ReactDOM.findDOMNode(this)
-    fromEvent(appDom, 'click')
-    .subscribe((e) => {
-        console.log(e);
-    }, (err) => {
-      console.log(`err: ${err}`);
-    })
   }
 }
 

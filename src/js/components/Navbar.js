@@ -1,7 +1,26 @@
 import React, { Component } from 'react'
 import Search from './Search'
-
+import { fromEvent } from 'rxjs'
 class Navbar extends Component {
+	componentDidMount() {
+		const navbarToggler = document.querySelectorAll('.navbar-toggler');
+		fromEvent(navbarToggler, 'click')
+		.subscribe(e => {
+			if(e.target.getAttribute('aria-expanded') === 'false')
+			{
+				e.target.setAttribute('aria-expanded','true')
+				document.querySelector(e.target.dataset.target).classList.add(e.target.dataset.toggle);
+				document.body.classList.add('hiden-scroll');
+			} else if (e.target.getAttribute('aria-expanded') === 'true')
+			{
+				e.target.setAttribute('aria-expanded','false')
+				document.querySelector(e.target.dataset.target).classList.remove(e.target.dataset.toggle);
+				document.body.classList.remove('hiden-scroll');
+			}
+		}, err => {
+			console.error(`navbarToggler: ${err}`);
+		})
+	}
 	state = {
 		search:''
 	}
@@ -13,7 +32,7 @@ class Navbar extends Component {
 	}
 	render() {
 		return (
-			<nav>
+			<nav id='Nav'>
 				<div className='container'>
 					{/* start brand */}
 					<a className="navbar-brand" href="#!">
@@ -48,14 +67,14 @@ class Navbar extends Component {
 						{/*toggle button navbar*/}
 						<button className="navbar-toggler"
 								type="button" 
-								data-toggle="collapse" 
-								data-target=""
-								aria-controls="" 
+								data-toggle="show" 
+								data-target=".menu"
+								aria-controls="Nav" 
 								aria-expanded="false" 
 								aria-label="Toggle navigation">
-							<span className="navbar-toggler-icon">
-								<i className="fa fa-bars" aria-hidden="true"></i>
-							</span>
+								<span className='navbar-toggler-icon'>
+									<i className="fa fa-bars pr-1" aria-hidden="true"></i>
+								</span>
 						</button>
 					</div>
 					{/*end mobile view toggle button */}
