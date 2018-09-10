@@ -1,26 +1,10 @@
 import React, { Component } from 'react'
 import Search from './Search'
+//import moduels rxjs
 import { fromEvent } from 'rxjs'
+
+
 class Navbar extends Component {
-	componentDidMount() {
-		const navbarToggler = document.querySelectorAll('.navbar-toggler');
-		fromEvent(navbarToggler, 'click')
-		.subscribe(e => {
-			if(e.target.getAttribute('aria-expanded') === 'false')
-			{
-				e.target.setAttribute('aria-expanded','true')
-				document.querySelector(e.target.dataset.target).classList.add(e.target.dataset.toggle);
-				document.body.classList.add('hiden-scroll');
-			} else if (e.target.getAttribute('aria-expanded') === 'true')
-			{
-				e.target.setAttribute('aria-expanded','false')
-				document.querySelector(e.target.dataset.target).classList.remove(e.target.dataset.toggle);
-				document.body.classList.remove('hiden-scroll');
-			}
-		}, err => {
-			console.error(`navbarToggler: ${err}`);
-		})
-	}
 	state = {
 		search:''
 	}
@@ -72,8 +56,8 @@ class Navbar extends Component {
 								aria-controls="Nav" 
 								aria-expanded="false" 
 								aria-label="Toggle navigation">
-								<span className='navbar-toggler-icon'>
-									<i className="fa fa-bars pr-1" aria-hidden="true"></i>
+								<span className='navbar-toggler-icon no-events'>
+									<i className="fa fa-bars pl-1" aria-hidden="true"></i>
 								</span>
 						</button>
 					</div>
@@ -81,6 +65,33 @@ class Navbar extends Component {
 				</div>
 			</nav>
 		);
+	}
+	componentDidMount() {
+		// toggle navbar in mobile view
+		const navbarToggler = document.querySelectorAll('.navbar-toggler');
+		fromEvent(navbarToggler, 'click')
+		.subscribe(e => {
+			if(e.target.getAttribute('aria-expanded') === 'false')
+			{
+				e.target.setAttribute('aria-expanded','true')
+				document.querySelector(e.target.dataset.target).classList.add('d-block');
+				setTimeout(()=> {
+					document.querySelector(e.target.dataset.target).classList.add(e.target.dataset.toggle);
+				}, 2);
+				document.body.classList.add('hiden-scroll');
+			} else if (e.target.getAttribute('aria-expanded') === 'true') {
+				e.target.setAttribute('aria-expanded','false')
+				document.querySelector(e.target.dataset.target).classList.remove(e.target.dataset.toggle);
+				document.querySelector(e.target.dataset.target)
+				.addEventListener('transitionend', function transitionend(ev) {
+					this.removeEventListener('transitionend', transitionend);
+					document.querySelector(e.target.dataset.target).classList.remove('d-block');
+				})
+				document.body.classList.remove('hiden-scroll');
+			}
+		}, err => {
+			console.log(`navbarToggler: ${err}`);
+		})
 	}
 }
 export default Navbar

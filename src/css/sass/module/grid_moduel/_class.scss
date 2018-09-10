@@ -1,4 +1,8 @@
 /* some global class style in css */
+.d-block
+{
+	display: block;
+}
 .p-0
 {
 	padding: 0;
@@ -31,7 +35,7 @@
 {
 	color: $text-color;
 }
-.navbar-toggler-icon
+.no-events
 {
 	pointer-events: none;
 }
