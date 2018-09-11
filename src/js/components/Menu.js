@@ -9,7 +9,7 @@ export default function (props)
 				<ul>
 					{/*first item for toggle menu item in mid device*/}
 					<li className='menu-toggle'>
-						<button className="navbar-toggler menu-link"
+						<button className="navbar-toggler menu-link btn-Toggler"
 								type="button" 
 								data-toggle="show" 
 								data-target=".menu"

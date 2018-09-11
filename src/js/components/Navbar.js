@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Search from './Search'
+import SearchItem from './SearchItem'
 //import moduels rxjs
 import { fromEvent } from 'rxjs'
 
@@ -7,6 +8,12 @@ import { fromEvent } from 'rxjs'
 class Navbar extends Component {
 	state = {
 		search:''
+	}
+	handelClear = (e) => {
+		e.preventDefault();
+		this.setState({
+			search:''
+		});
 	}
 	handelChange = (e) => {
 		e.preventDefault();
@@ -16,7 +23,7 @@ class Navbar extends Component {
 	}
 	render() {
 		return (
-			<nav id='Nav'>
+			<nav>
 				<div className='container'>
 					{/* start brand */}
 					<a className="navbar-brand" href="#!">
@@ -27,7 +34,10 @@ class Navbar extends Component {
 					</a>
 					{/*end brand*/}
 					{/*start search form*/}
-					<Search handelChange={this.handelChange} value={this.state.search}/>
+					<div className='search' id='Search'>
+						<Search handelChange={this.handelChange} value={this.state.search} clear={this.handelClear}/>
+						<SearchItem items={this.state.search}/>
+					</div>
 					{/*end search form*/}
 					{/*subscribe button*/}
 					<button type='button' className='btn btn-green btn-sub'>
@@ -41,19 +51,23 @@ class Navbar extends Component {
 					{/*start mobile view toggle button */}
 					<div className='mobile-view'>
 						{/*toggle button for form search*/}
-						<button className='search-form-toggler'
+						<button className='search-form-toggler btn-Toggler'
 								type='button'
+								data-toggle="show" 
+								data-target="#Search"
+								aria-controls="Search" 
+								aria-expanded="false" 
 								aria-label='Toggle search'>
-							<span className='search-toggler-icon'>
+							<span className='search-toggler-icon no-events'>
 								<i className="fa fa-search" aria-hidden="true"></i>
 							</span>
 						</button>
 						{/*toggle button navbar*/}
-						<button className="navbar-toggler"
+						<button className="navbar-toggler btn-Toggler"
 								type="button" 
 								data-toggle="show" 
-								data-target=".menu"
-								aria-controls="Nav" 
+								data-target="#Menu"
+								aria-controls="Menu" 
 								aria-expanded="false" 
 								aria-label="Toggle navigation">
 								<span className='navbar-toggler-icon no-events'>
@@ -68,7 +82,7 @@ class Navbar extends Component {
 	}
 	componentDidMount() {
 		// toggle navbar in mobile view
-		const navbarToggler = document.querySelectorAll('.navbar-toggler');
+		const navbarToggler = document.querySelectorAll('.btn-Toggler');
 		fromEvent(navbarToggler, 'click')
 		.subscribe(e => {
 			if(e.target.getAttribute('aria-expanded') === 'false')

@@ -17,6 +17,10 @@ button
 	transition: background 0.2s ease-in-out;
 
 }
+.btn-Toggler[aria-expanded='true']
+{
+	color: $main-color;
+}
 .btn-green
 {
 	background-color: $main-color2;

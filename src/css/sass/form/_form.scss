@@ -4,6 +4,7 @@
 
 form
 {
+	width: 100%;
 	text-transform: capitalize;
 	.input
 	{
@@ -11,7 +12,7 @@ form
 	}
 	input[type='text']
 	{
-		padding: 10px;
+		padding: 10px 30px;
 		width: 100%;
 		box-shadow: 0px 1px 1px #bbb inset;
 		border-radius: 5px;
@@ -35,12 +36,21 @@ form
 	{
 		position: absolute;
 		top: 10px;
-		#{left}: 10px;
+		#{left}: 30px;
 		color: #666;
 	}
 	.placeholder-icon
 	{
 	    position: absolute;
+	    top: 10px;
+	    #{left}: 10px;
+		color: #666;
+	}
+	.clear-icon
+	{
+    	display: inline-block;
+		cursor: pointer;
+		position: absolute;
 	    top: 10px;
 	    #{right}: 10px;
 		color: #666;

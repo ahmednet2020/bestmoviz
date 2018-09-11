@@ -10,7 +10,7 @@ nav
     width: 100%;
     height: 70px;
 	padding: 1em 0;
-	background-color: #f9f9f9;
+	background-color: $white-color;
 	box-shadow: 0 1px 1px 2px $border-color;
 	z-index: 999;
 	.container
@@ -19,10 +19,23 @@ nav
 	    justify-content: space-between;
 	    align-items: center;
 	}
-	form
+	.search
 	{
+		position: relative;
 		width: 40%;
 		flex: 0 0 40%;
+	}
+	.search-item
+	{
+		position: absolute;
+	    top: auto;
+	    left: 0;
+	    width: 100%;
+	    padding: 10px;
+	    box-shadow: 0 1px 2px 0px $border-color, 0 10px 25px -15px $border-color;
+		background-color: $white-color;
+		height: 300px;
+		overflow: auto;
 	}
 	.navbar-brand
 	{
@@ -41,10 +54,6 @@ nav
 		font-size: 1.5em;
     	padding-right: 0.5em;
 	}
-	.navbar-toggler[aria-expanded='true']
-	{
-		color: $main-color;
-	}
 }
 // style in mobile
 @include media($max_lg)
@@ -55,7 +64,7 @@ nav
 		{
 			display: none;
 		}
-		form
+		.search
 		{
 			width: 50%;
 			flex: 0 0 50%;
@@ -66,9 +75,30 @@ nav
 {
 	nav
 	{
-		form
+		.search
 		{
 			display: none;
+			position: fixed;
+		    top: 70px;
+			left: 0;
+		    right: 0;
+		    bottom: 0;
+		    width: 100%;
+		    z-index: 999;
+			background-color: $white-color;
+		    transform: translate(0,-100%);
+			transition: transform 0.3s ease-in-out;
+			will-change: transform;
+			overflow: auto;
+			&.show
+			{
+		    	transform: translate(0);
+			}
+		}
+		.search-item
+		{
+			height: auto;
+			overflow: visible;
 		}
 		.mobile-view
 		{
