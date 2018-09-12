@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Menu from '../components/Menu'
-
+import MoviesList from '../components/MoviesList'
 class Home extends Component {
   render() {
     return (
@@ -11,7 +11,7 @@ class Home extends Component {
             <Menu />
           </div>
           <div className='col-12 col-md-10 col-lg-6'>
-            movizlist
+            <MoviesList />
           </div>
           <div className='col-12 col-lg-4 d-none d-lg-block'>
             adv

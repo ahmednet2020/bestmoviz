@@ -19,7 +19,7 @@ export default function ({handelChange, value, clear})
 				<span className='placeholder-icon'>
 					<i className="fa fa-search" aria-hidden="true"></i>
 				</span>
-				<span className='clear-icon' onClick={clear}>
+				<span className={`clear-icon ${value? '' : 'hidden' }`} onClick={clear}>
 					<i className="fa fa-times" aria-hidden="true"></i>
 				</span>
 			</div>
