@@ -1,24 +1,28 @@
 .movie
 {
-    display: inline-block;
+    display: block;
+    width: 100%;
 	position: relative;
+    margin: 10px 0;
     .movie-img
     {
-    	height: 250px;
-	    width: 100%;
-	    object-fit: cover;
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
     }
     .movie-title
     {
-    	position: absolute;
-	    top: 45%;
-	    left: 0;
-	    bottom: 0;
-	    right: 0;
-	    width: 100%;
-	    color: $white-color;
-        background-color: $main-color2;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        color: $white-color;
         padding: 0.5em;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        will-change: opacity;
     }
     .movie-description
     {
@@ -34,42 +38,109 @@
     .ribbon
     {
         position: absolute;
-        top: -87%;
+        top: -8px;
         left: -7px;
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
         overflow: hidden;
-        span
+        line-height: 1.2;
+        color: $white-color;
+    }
+    .ribbon-text
+    {
+        transform: rotate(-45deg);
+        display: block;
+        position: absolute;
+        top: 22px;
+        left: -19px;
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        &:before,
+        &:after
         {
-            transform: rotate(-45deg);
-            display: block;
+            content: '';
             position: absolute;
-            top: 13px;
-            left: -16px;
+            top: 100%;
+            z-index: -1;
+            border: 4px solid transparent;
+        }
+        &:before
+        {
+            left: 0;
+        }
+        &:after
+        {
+            right: 0;
+        }
+    }
+    &:hover
+    {
+        .movie-title
+        {
+            opacity: 1;
+        }
+    }
+    &.web-dl
+    {
+        .movie-title
+        {
             background-color: $main-color2;
-            width: 100%;
-            text-align: center;
-            text-transform: uppercase;
-            &:before,
-            &:after
-            {
-                content: '';
-                position: absolute;
-                top: 100%;
-                z-index: -1;
-                border: 4px solid transparent;
-            }
+        }
+        .ribbon-text
+        {
+            background-color: $main-color2;
             &:before
             {
-                left: 0;
                 border-top-color: $main-color2;
                 border-left-color: $main-color2;
             }
             &:after
             {
-                right: 0;
                 border-top-color: $main-color2;
                 border-right-color: $main-color2;
+            }
+        }
+    }
+    &.bluray
+    {
+        .movie-title
+        {
+            background-color: $text-color;
+        }
+        .ribbon-text
+        {
+            background-color: $text-color;
+            &:before
+            {
+                border-top-color: $text-color;
+                border-left-color: $text-color;
+            }
+            &:after
+            {
+                border-top-color: $text-color;
+                border-right-color: $text-color;
+            }
+        }
+    }
+    &.hdcam
+    {
+        .movie-title
+        {
+            background-color: $main-color;
+        }
+        .ribbon-text
+        {
+            background-color: $main-color;
+            &:before
+            {
+                border-top-color: $main-color;
+                border-left-color: $main-color;
+            }
+            &:after
+            {
+                border-top-color: $main-color;
+                border-right-color: $main-color;
             }
         }
     }

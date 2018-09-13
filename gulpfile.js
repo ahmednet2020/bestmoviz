@@ -12,7 +12,7 @@ const mergeStream = require('merge-stream');
  // =================================
 gulp.task('copy', function () {
   return mergeStream(
-    gulp.src('./src/assets/imgs/**/*').pipe(gulp.dest('./public/imgs/')),
+    gulp.src('./src/assets/img/**/*').pipe(gulp.dest('./public/img/')),
     gulp.src('./src/assets/manifest.json').pipe(gulp.dest('./public/')),
     gulp.src('./src/assets/fonts/**').pipe(gulp.dest('./public/fonts')),
     gulp.src('./src/assets/robots.txt').pipe(gulp.dest('./public/'))
