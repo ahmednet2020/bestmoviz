@@ -1,0 +1,56 @@
+.links
+{
+	position: fixed;
+    bottom: 0;
+    #{left}: 0;
+    .share-link
+	{
+		display: block;
+		width: 50px;
+	    padding: 15px;
+	    margin: 10px 0;
+	    color: $white-color;
+	    font-size: 1.2rem;
+	    transition: width 0.3s ease-in-out;
+		will-change: width;
+		text-align: center;
+		&[aria-label='facebook']
+		{
+	    	background-color: #3c5a98;
+		}
+		&[aria-label='twitter']
+		{
+	    	background-color: #2daae4;
+		}
+		&[aria-label='google-plus']
+		{
+	    	background-color: #da2713;
+		}
+	    &:hover,
+	    &:focus
+	    {
+	    	width: 70px;
+	    }
+	}
+}
+// style in mobile
+@include media($max_mid)
+{
+    .links
+	{
+	    #{right}: 0;
+	    text-align: center;
+	    z-index: 999;
+	    .share-link
+	    {
+	    	display: inline-block;
+	    	margin: 0;
+	    	width: 33.3333%;
+	    	&:hover,
+	    	&:focus
+		    {
+		    	width: 33.3333%;
+		    }
+	    }
+    }
+}

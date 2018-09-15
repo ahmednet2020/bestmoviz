@@ -46,6 +46,48 @@ class MoviesList extends Component {
 			rate: '8/10',
 			ribbon: 'bluray',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994a7',
+			img:'img/movie7.jpg',
+			name:'better call',
+			rate: '6/10',
+			ribbon: 'bluray',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994a8',
+			img:'img/movie8.jpg',
+			name:'power',
+			rate: '7/10',
+			ribbon: 'web-dl',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994a9',
+			img:'img/movie9.jpg',
+			name:'vengeance',
+			rate: '9/10',
+			ribbon: 'hdcam',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994b1',
+			img:'img/movie10.jpg',
+			name:'half girlfriend 2017',
+			rate: '9/10',
+			ribbon: 'bluray',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994b2',
+			img:'img/movie11.jpg',
+			name:'fear the walking dead',
+			rate: '4/10',
+			ribbon: 'web-dl',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
+		},{
+			id: '1994b3',
+			img:'img/movie12.jpg',
+			name:'المختارون 2017',
+			rate: '7/10',
+			ribbon: 'bluray',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		}]
 	}
 	render() {
