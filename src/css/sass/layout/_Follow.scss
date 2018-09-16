@@ -1,0 +1,56 @@
+.follow
+{
+	padding: 10px;
+    text-align: center;
+    background-color: $white-color;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    .follow-title
+    {
+    	padding-bottom: 0.5em;
+    	border-bottom: 1px solid $border-color;
+    	color: $black-color;
+    }
+    .follow-links
+    {
+    	margin-top: 0.5em;
+    	line-height: 1.5;
+    }
+    .content
+    {
+    	display: inline-block;
+    	margin: auto;
+    	width: auto;
+    	text-align: left;
+    }
+    .follow-link
+    {
+    	display: block;
+    	padding: 0.5em 0;
+    	color: $text-color;
+    }
+    .fa
+    {
+    	vertical-align: middle
+    }
+    .fa-facebook-square
+    {
+    	color: #3c5a98;
+    }
+    .fa-twitter-square
+    {
+    	color: #2daae4;
+    }
+    .fa-google-plus-square
+    {
+    	color: #da2713;
+    }
+    .fa-instagram
+    {
+    	color: #3c5a98;
+    }
+    .fa-pinterest-square
+    {
+    	color: #e3262e;
+    }
+}

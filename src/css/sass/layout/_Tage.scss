@@ -1,0 +1,23 @@
+.tages
+{
+	.col-12
+	{
+		padding: 0.4em;
+	}
+	.tage-link
+	{
+		border-radius: 5px;
+	    background-color: $white-color;
+	    display: block;
+	    padding: 1em 0;
+	    text-align: center;
+	    color: $main-color;
+	    text-transform: capitalize;
+	    &:hover,
+	    &:focus
+	    {
+	    	color: $white-color;
+	    	background-color: $main-color;
+	    }
+	}
+}

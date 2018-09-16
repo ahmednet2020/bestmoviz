@@ -92,7 +92,7 @@ class MoviesList extends Component {
 	}
 	render() {
 		return (
-			<div className='row m-0'>
+			<section className='row m-0'>
 				{
 					this.state.movies.map((movie) => (
 	              		<div className='col-12 col-md-6 col-lg-4' key={movie.id}>
@@ -100,7 +100,7 @@ class MoviesList extends Component {
 	              		</div>
 					))
 				}
-            </div>
+            </section>
 		);
 	}
 }
