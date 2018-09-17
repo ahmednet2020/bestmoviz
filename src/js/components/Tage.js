@@ -6,7 +6,7 @@ class Tage extends Component {
 	}
 	render() {
 		return (
-			<section className='tages'>
+			<section className='tages my-4'>
 				<div className='row m-0'>
 					{
 						this.state.tages.map((tage) => (

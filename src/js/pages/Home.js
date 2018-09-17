@@ -5,6 +5,8 @@ import MoviesList from '../components/MoviesList'
 import Links from '../components/Links'
 import Follow from '../components/Follow'
 import Tage from '../components/Tage'
+import Copyright from '../components/Copyright'
+import Adbox from '../components/Adbox'
 
 class Home extends Component {
   render() {
@@ -18,8 +20,11 @@ class Home extends Component {
             <MoviesList />
           </div>
           <div className='col-12 col-lg-3'>
+            <Adbox src='img/ad1.jpg'/>
             <Follow />
             <Tage />
+            <Adbox src='img/ad1.jpg'/>
+            <Copyright />
           </div>
         </div>
         <Links />

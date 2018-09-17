@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function () {
 	return (
-		<section className='follow'>
+		<section className='follow my-4'>
 			<h4 className='follow-title'>follow bestmoviz</h4>
 			<div className='follow-links'>
 				<div className='content'>
