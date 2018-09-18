@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+//import components
 import Menu from '../components/Menu'
 import MoviesList from '../components/MoviesList'
 import Links from '../components/Links'

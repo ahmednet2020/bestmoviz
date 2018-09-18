@@ -1,5 +1,6 @@
-import React from 'react';
-
+import React from 'react'
+// import moduels
+import { NavLink } from 'react-router-dom'
 export default function (props)
 {
 	return (
@@ -24,36 +25,36 @@ export default function (props)
 					</li>
 					{/*start menu item */}
 					<li>
-						<a href='#!' className='menu-link active'>
+						<NavLink to="/" className='menu-link' activeClassName='active'>
 							<span className='navbar-toggler-icon no-events'>
 								<i className="fa fa-home" aria-hidden="true"></i>
 							</span>
 							<span className='menu-name no-events'>bestmoviz</span>
-						</a>
+						</NavLink>
 					</li>
 					<li>
-						<a href='#!' className='menu-link'>
+						<NavLink to="/trending" className='menu-link' activeClassName='active'>
 							<span className='navbar-toggler-icon no-events'>
 								<i className="fa fa-line-chart" aria-hidden="true"></i>
 							</span>
 							<span className='menu-name no-events'>trending</span>
-						</a>
+						</NavLink>
 					</li>
 					<li>
-						<a href='#!' className='menu-link'>
+						<NavLink to="/movies" className='menu-link' activeClassName='active'>
 							<span className='navbar-toggler-icon no-events'>
 								<i className="fa fa-film" aria-hidden="true"></i>
 							</span>
 							<span className='menu-name no-events'>movies</span>
-						</a>
+						</NavLink>
 					</li>
 					<li>
-						<a href='#!' className='menu-link'>
+						<NavLink to="/tv" className='menu-link' activeClassName='active'>
 							<span className='navbar-toggler-icon no-events'>
 								<i className="fa fa-television" aria-hidden="true"></i>
 							</span>
 							<span className='menu-name no-events'>tv</span>
-						</a>
+						</NavLink>
 					</li>
 					{/*end menu item */}
 				</ul>

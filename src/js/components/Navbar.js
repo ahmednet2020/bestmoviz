@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+//import modules
+import { withRouter } from 'react-router-dom'
+//import components
 import Search from './Search'
 import SearchItem from './SearchItem'
 //import moduels rxjs
 import { fromEvent } from 'rxjs'
-
 
 class Navbar extends Component {
 	state = {
@@ -108,4 +110,4 @@ class Navbar extends Component {
 		})
 	}
 }
-export default Navbar
+export default withRouter(Navbar)

@@ -2,7 +2,25 @@ import React, { Component } from 'react';
 
 class Tage extends Component {
 	state={
-		tages:['2017', '2018', 'bluray', 'subbed', 'us']
+		tages:['2017', 
+		'2018', 
+		'bluray', 
+		'subbed', 
+		'us', 
+		'hd', 
+		'war', 
+		'arab', 
+		'egypt', 
+		'hindi', 
+		'korean', 
+		'japanese', 
+		'horror', 
+		'action', 
+		'romance', 
+		'comedy', 
+		'animation', 
+		'scifi', 
+		'documentary']
 	}
 	render() {
 		return (
@@ -13,7 +31,7 @@ class Tage extends Component {
 							<div className='col-12 col-lg-6' key={tage}>
 								<a href='#!' className='tage-link'>
 									{
-										`movies ${tage}`
+										`${tage}`
 									}
 								</a>
 							</div>
