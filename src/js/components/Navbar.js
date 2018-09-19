@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import modules
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 //import components
 import Search from './Search'
 import SearchItem from './SearchItem'
@@ -28,12 +28,12 @@ class Navbar extends Component {
 			<nav>
 				<div className='container'>
 					{/* start brand */}
-					<a className="navbar-brand" href="#!">
+					<Link className="navbar-brand" to='/'>
 						<h1>
 							<span className='text-red'>Best</span>
 							<span className='text-blue'>Moviz</span>
 						</h1>
-					</a>
+					</Link>
 					{/*end brand*/}
 					{/*start search form*/}
 					<div className='search' id='Search'>

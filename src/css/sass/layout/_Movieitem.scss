@@ -1,0 +1,24 @@
+.movie-item
+{
+	.movie-img
+	{
+		min-height: 400px;
+    	max-height: 430px;
+	}
+	table
+	{
+		background-color: $white-color;
+	    text-transform: capitalize;
+	    width: 100%;
+	    line-height: 1.5;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	}
+	td,
+	th
+	{
+		border: 1px solid $border-color;
+	    padding: 10px;
+	    text-align: #{$left};
+	}
+}

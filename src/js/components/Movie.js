@@ -1,24 +1,28 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 
-export default function({img, name,rate, description, ribbon})
+export default function(props)
 {
 	return (
-		<a href='#!' className={`movie ${ribbon}`}>
+		<Link to={{
+			pathname:`/movie/${props.id}`,
+			state:{movie:props}
+		}} className={`movie ${props.ribbon}`}>
 			<figure>
-				<img src={img} alt={name} title='name' className='movie-img'/>
+				<img src={props.img} alt={props.name} title='name' className='movie-img'/>
 				<figcaption>
 					<span className='ribbon'>
 						<span className='ribbon-text'>
-							{ribbon}
+							{props.ribbon}
 						</span>
 					</span>
 					<div  className='movie-title'>
-						<h5 className='movie-name'>{name}</h5>
-						<div className='rate'>{rate}</div>
-						<p className='movie-description'>{description}</p>
+						<h5 className='movie-name'>{props.name}</h5>
+						<div className='rate'>{props.rate}</div>
+						<p className='movie-description'>{props.description}</p>
 					</div>
 				</figcaption>
 			</figure>
-		</a>
+		</Link>
 	)
 };

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 // import pages
 import Navbar from './js/components/Navbar'
 import Home from './js/pages/Home'
+import Moviepage from './js/pages/Moviepage'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
 	      		<Navbar />
 	      	<Switch>
 	      		<Route exact path="/" component={Home} />
+	      		<Route path="/movie/:id" component={Moviepage} />
 	      		<Route render={(match) => <Redirect push to='/'/>} />
 	      	</Switch>
 	      </div>

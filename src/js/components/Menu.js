@@ -25,7 +25,7 @@ export default function (props)
 					</li>
 					{/*start menu item */}
 					<li>
-						<NavLink to="/" className='menu-link' activeClassName='active'>
+						<NavLink exact to="/" className='menu-link' activeClassName='active'>
 							<span className='navbar-toggler-icon no-events'>
 								<i className="fa fa-home" aria-hidden="true"></i>
 							</span>
