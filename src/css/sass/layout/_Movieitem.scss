@@ -21,4 +21,35 @@
 	    padding: 10px;
 	    text-align: #{$left};
 	}
+	.notice
+	{
+		display: block;
+		margin: 0.5em 0;
+		background-color: #e9f2ff;
+		border: 1px solid #069;
+		padding: 10px;
+		color: $black-color;
+		.fa
+		{
+			color: #069;
+		}
+	}
+	.description
+	{
+		display: block;
+		margin: 0.5em 0;
+		background-color: #fff;
+		border: 1px solid $border-color;
+		color: $black-color;
+		.title
+		{
+			padding: 10px;
+			background-color: $white-color;
+			border-bottom: 1px solid $border-color;
+		}
+		.text
+		{
+			padding: 10px;
+		}
+	}
 }

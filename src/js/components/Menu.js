@@ -1,6 +1,7 @@
 import React from 'react'
 // import moduels
 import { NavLink } from 'react-router-dom'
+
 export default function (props)
 {
 	return (
@@ -16,7 +17,8 @@ export default function (props)
 								data-target=".menu"
 								aria-controls="Menu" 
 								aria-expanded="false" 
-								aria-label="Toggle navigation">
+								aria-label="Toggle navigation"
+								onClick={props.handelToggler}>
 								<span className='navbar-toggler-icon no-events'>
 									<i className="fa fa-bars" aria-hidden="true"></i>
 								</span>

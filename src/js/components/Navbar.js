@@ -4,8 +4,6 @@ import { withRouter, Link } from 'react-router-dom'
 //import components
 import Search from './Search'
 import SearchItem from './SearchItem'
-//import moduels rxjs
-import { fromEvent } from 'rxjs'
 
 class Navbar extends Component {
 	state = {
@@ -59,7 +57,8 @@ class Navbar extends Component {
 								data-target="#Search"
 								aria-controls="Search" 
 								aria-expanded="false" 
-								aria-label='Toggle search'>
+								aria-label='Toggle search'
+								onClick={this.props.handelToggler}>
 							<span className='search-toggler-icon no-events'>
 								<i className="fa fa-search" aria-hidden="true"></i>
 							</span>
@@ -71,7 +70,8 @@ class Navbar extends Component {
 								data-target="#Menu"
 								aria-controls="Menu" 
 								aria-expanded="false" 
-								aria-label="Toggle navigation">
+								aria-label="Toggle navigation"
+								onClick={this.props.handelToggler}>
 								<span className='navbar-toggler-icon no-events'>
 									<i className="fa fa-bars pl-1" aria-hidden="true"></i>
 								</span>
@@ -81,33 +81,6 @@ class Navbar extends Component {
 				</div>
 			</nav>
 		);
-	}
-	componentDidMount() {
-		// toggle navbar in mobile view
-		const navbarToggler = document.querySelectorAll('.btn-Toggler');
-		fromEvent(navbarToggler, 'click')
-		.subscribe(e => {
-			if(e.target.getAttribute('aria-expanded') === 'false')
-			{
-				e.target.setAttribute('aria-expanded','true')
-				document.querySelector(e.target.dataset.target).classList.add('d-block');
-				setTimeout(()=> {
-					document.querySelector(e.target.dataset.target).classList.add(e.target.dataset.toggle);
-				}, 2);
-				document.body.classList.add('hiden-scroll');
-			} else if (e.target.getAttribute('aria-expanded') === 'true') {
-				e.target.setAttribute('aria-expanded','false')
-				document.querySelector(e.target.dataset.target).classList.remove(e.target.dataset.toggle);
-				document.querySelector(e.target.dataset.target)
-				.addEventListener('transitionend', function transitionend(ev) {
-					this.removeEventListener('transitionend', transitionend);
-					document.querySelector(e.target.dataset.target).classList.remove('d-block');
-				})
-				document.body.classList.remove('hiden-scroll');
-			}
-		}, err => {
-			console.log(`navbarToggler: ${err}`);
-		})
 	}
 }
 export default withRouter(Navbar)
