@@ -14,7 +14,7 @@ export default function (props) {
 			<div className='row m-0'>
 				<div className='col-12 col-lg-4'>
 					<figure>
-						<img src={`../${props.state.img}`} alt={props.state.name} title='name' className='movie-img'/>
+						<img src={`../${props.state.img}`} alt={props.state.name} title={props.state.name} className='movie-img'/>
 						<figcaption>
 							<span className='ribbon'>
 								<span className='ribbon-text'>
@@ -33,6 +33,7 @@ export default function (props) {
 						watch and download movie
 					</a>
 				</div>
+				{ props.state.ribbon !== 'bluray' &&
 				<div className='col-12'>
 					<div className='notice'>
 						<p><i className="fa fa-exclamation-triangle pr-1" aria-hidden="true"></i>
@@ -44,14 +45,25 @@ export default function (props) {
 						</p>
 					</div>
 				</div>
+				}
 				<div className='col-12'>
-					<div className='description'>
+					<div className='description box'>
 						<h4 className='title'>
 							description
 						</h4>
-						<p className='text'>
+						<p className='text content'>
 							{props.state.description}
 						</p>
+					</div>
+				</div>
+				<div className='col-12'>
+					<div className='trailer box'>
+						<h4 className='title'>
+							trailer
+						</h4>
+						<div className='video content'>
+							<img src={`https://img.youtube.com/vi/${props.state.trailer}/hqdefault.jpg`} alt={props.state.name} title={props.state.name} className='movie-img'/>
+						</div>
 					</div>
 				</div>
 				<div id='download'>download</div>

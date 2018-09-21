@@ -10,6 +10,7 @@ class MoviesList extends Component {
 			name:'mr magoriums wonder emporium 2007',
 			rate: '7/10',
 			ribbon: 'web-dl',
+			trailer:'Grsk5tfoXvg',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a2',
@@ -17,6 +18,7 @@ class MoviesList extends Component {
 			name:'next gun',
 			rate: '8/10',
 			ribbon: 'bluray',
+			trailer:'uf3ALGKgpGU',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a3',
@@ -24,6 +26,7 @@ class MoviesList extends Component {
 			name:'the rookie 1990',
 			rate: '8/10',
 			ribbon: 'hdcam',
+			trailer:'j2AuK8nu63s',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a4',
@@ -31,6 +34,7 @@ class MoviesList extends Component {
 			name:'suicide squad 2016',
 			rate: '8/10',
 			ribbon: 'hdcam',
+			trailer:'mMb-RrhTxIE',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a5',
@@ -38,6 +42,7 @@ class MoviesList extends Component {
 			name:'battle of the damned 2013',
 			rate: '8/10',
 			ribbon: 'web-dl',
+			trailer:'eVB-9Mgsx38',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a6',
@@ -45,6 +50,7 @@ class MoviesList extends Component {
 			name:'the revenant 2018',
 			rate: '8/10',
 			ribbon: 'bluray',
+			trailer:'LoebZZ8K5N0',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a7',
@@ -52,6 +58,7 @@ class MoviesList extends Component {
 			name:'better call',
 			rate: '6/10',
 			ribbon: 'bluray',
+			trailer:'xZYCcZ3gGEU',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a8',
@@ -59,6 +66,7 @@ class MoviesList extends Component {
 			name:'power',
 			rate: '7/10',
 			ribbon: 'web-dl',
+			trailer:'0bbwp6feNwM',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994a9',
@@ -66,6 +74,7 @@ class MoviesList extends Component {
 			name:'vengeance',
 			rate: '9/10',
 			ribbon: 'hdcam',
+			trailer:'sTSA2bHZjeE',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994b1',
@@ -73,6 +82,7 @@ class MoviesList extends Component {
 			name:'half girlfriend 2017',
 			rate: '9/10',
 			ribbon: 'bluray',
+			trailer:'KmlBnmyelHI',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994b2',
@@ -80,6 +90,7 @@ class MoviesList extends Component {
 			name:'fear the walking dead',
 			rate: '4/10',
 			ribbon: 'web-dl',
+			trailer:'yzXglr5bc3w',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		},{
 			id: '1994b3',
@@ -87,6 +98,7 @@ class MoviesList extends Component {
 			name:'المختارون 2017',
 			rate: '7/10',
 			ribbon: 'bluray',
+			trailer:'lzLjnvAz7oU',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet expedita veniam enim maxime dolor, est.'
 		}]
 	}

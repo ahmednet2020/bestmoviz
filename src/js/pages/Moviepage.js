@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+//import components
 import Menu from '../components/Menu'
 import Links from '../components/Links'
 import Follow from '../components/Follow'
