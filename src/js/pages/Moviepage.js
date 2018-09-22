@@ -16,7 +16,7 @@ export default function (props) {
 		          <Menu handelToggler={props.handelToggler}/>
 		        </div>
 		        <div className='col-12 col-md-10 col-lg-7'>
-		        	<Movieitem state={props.location.state.movie} url={props.match.url}/>
+		        	<Movieitem state={props.location.state.movie}/>
 		        </div>
 		        <div className='col-12 col-lg-3'>
 		          <Adbox src='../img/ad1.jpg'/>

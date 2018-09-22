@@ -17,6 +17,9 @@ class MoviesList extends Component {
             </section>
 		);
 	}
+	componentDidMount() {
+		window.scrollTo(0,0);
+	}
 }
 function mapStateToProps(store){
 	return {

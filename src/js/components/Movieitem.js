@@ -67,32 +67,52 @@ class Movieitem extends Component {
 							</div>
 						</div>
 					</div>
-					<div id='download'>download</div>
-					<div id="disqus_thread" style={{
-						'width':'100%'
-					}}></div>
+					<div className='col-12'>
+						<div id='download'>download</div>
+					</div>
+					<div className='col-12'>
+						{/*disqus tage content*/}
+						<div id="disqus_thread" style={{
+							'width':'100%'
+						}}></div>
+					</div>
 				</div>
 			</div>
 		);
 	}
 	componentDidMount()
 	{
-		let url = this.props.url;
+		window.scrollTo(0,0);
+		let url = window.location.href;
 		let identifier = this.props.state.id;
-		/**
-		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-		// eslint-disable-next-line
-		var disqus_config = function () {
-		this.page.url = url;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = identifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		//disqus_config config var 
+		window.disqus_config = function () {
+			this.page.url = url;
+			this.page.identifier = identifier;
+			this.language ='ar';
 		};
-		(function() { // DON'T EDIT BELOW THIS LINE
-		let d = document, s = d.createElement('script');
-		s.src = 'https://bestmoviz.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();                
+		// if first time or not 
+		if(window.DISQUS)
+		{
+			window.DISQUS.reset({
+			  reload: true,
+			  config: function () {  
+			    this.page.url = url;
+				this.page.identifier = identifier;
+				this.language ='ar';
+			  }
+			});
+		} else {
+			// add disqus script in first time commant
+			(function() { // DON'T EDIT BELOW THIS LINE
+			let d = document, s = d.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = 'https://bestmoviz.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		}             
 	}
 }
 export default Movieitem
