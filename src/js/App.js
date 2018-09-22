@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+//import store
+import { Provider } from 'react-redux'
+import store from './store'
 //import modules
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 // import pages
-import Navbar from './js/components/Navbar'
-import Home from './js/pages/Home'
-import Moviepage from './js/pages/Moviepage'
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+import Moviepage from './pages/Moviepage'
 
 class App extends Component {
 
@@ -36,20 +39,22 @@ class App extends Component {
   render()
   {
     return (
-    	<Router>
-	      <div className="App">
-	      		<Navbar handelToggler={this.handelToggler}/>
-	      	<Switch>
-	      		<Route exact path="/" render={
-	      			(match) => <Home {...match} handelToggler={this.handelToggler}/>
-	      		}/>
-	      		<Route path="/movie/:id" render={
-	      			(match) => <Moviepage {...match} handelToggler={this.handelToggler}/>
-	      		}/>
-	      		<Route render={(match) => <Redirect push to='/'/>} />
-	      	</Switch>
-	      </div>
-     	</Router>
+    	<Provider store={store}>
+	    	<Router>
+		      <div className="App">
+		      		<Navbar handelToggler={this.handelToggler}/>
+		      	<Switch>
+		      		<Route exact path="/" render={
+		      			(match) => <Home {...match} handelToggler={this.handelToggler}/>
+		      		}/>
+		      		<Route path="/movie/:id" render={
+		      			(match) => <Moviepage {...match} handelToggler={this.handelToggler}/>
+		      		}/>
+		      		<Route render={(match) => <Redirect push to='/'/>} />
+		      	</Switch>
+		      </div>
+	     	</Router>
+     	</Provider>
     );
   }
 }

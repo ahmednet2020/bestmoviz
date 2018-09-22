@@ -2,9 +2,7 @@ import React from 'react';
 
 export default function({items})
 {
-	let showORhidden = {
-		'display':'block'
-	}
+	let showORhidden;
 	if(items.length === 0)
 	{
 		showORhidden = {
@@ -17,7 +15,9 @@ export default function({items})
 	}
 	return (
 		<div className='search-item' style={showORhidden}>
-			{items}
+			{items.map((item,i)=> (
+				<div key={i}>{item.name}</div>
+			))}
 		</div>
 	)
 }

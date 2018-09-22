@@ -1,25 +1,22 @@
 import React, { Component } from 'react'
-//import modules
+// import redux moduel 
+import { connect } from 'react-redux'
+// import action moduel 
+import search from '../action/search'
+//import router modules
 import { withRouter, Link } from 'react-router-dom'
 //import components
 import Search from './Search'
 import SearchItem from './SearchItem'
 
 class Navbar extends Component {
-	state = {
-		search:''
-	}
 	handelClear = (e) => {
 		e.preventDefault();
-		this.setState({
-			search:''
-		});
+		this.props.searchAction('')
 	}
 	handelChange = (e) => {
 		e.preventDefault();
-		this.setState({
-			search: e.target.value
-		});
+		this.props.searchAction(e.target.value)
 	}
 	render() {
 		return (
@@ -35,8 +32,8 @@ class Navbar extends Component {
 					{/*end brand*/}
 					{/*start search form*/}
 					<div className='search' id='Search'>
-						<Search handelChange={this.handelChange} value={this.state.search} clear={this.handelClear}/>
-						<SearchItem items={this.state.search}/>
+						<Search handelChange={this.handelChange} clear={this.handelClear}/>
+						<SearchItem items={this.props.search}/>
 					</div>
 					{/*end search form*/}
 					{/*subscribe button*/}
@@ -83,4 +80,16 @@ class Navbar extends Component {
 		);
 	}
 }
-export default withRouter(Navbar)
+function mapStateToProps(store){
+	return {
+		search:store.search
+	}
+}
+function mapDispatchToProps(dispatch){
+	return {
+		searchAction:(val) => {
+			dispatch(search(val))
+		}
+	}
+}
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Navbar))

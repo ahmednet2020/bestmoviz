@@ -11,7 +11,6 @@ export default function ({handelChange, value, clear})
 						id='search'
 						required='required' 
 						autoComplete='off'
-						value={value}
 						onChange={handelChange}/>
 				<label htmlFor='search' className='placeholder'>
 					search for movize or tv or actor ...

@@ -1,5 +1,5 @@
 import React from 'react'
-// import moduels
+// import router moduels
 import { NavLink } from 'react-router-dom'
 
 export default function (props)
