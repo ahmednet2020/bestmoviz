@@ -1,29 +1,27 @@
 import React, { Component } from 'react'
 // import components
 import Movietable from './Movietable'
-
+import Moviepost from './Moviepost'
+import Notice from './Notice'
+import Trailer from './Trailer'
 //function for event click to downpage
 class Movieitem extends Component {
+	state={play:false}
 	downtomovie = (e) => {
 		e.preventDefault();
 		let x = document.querySelector(e.target.getAttribute('href'));
 		window.scrollTo(0, x.offsetTop);
+	}
+	playVideo = (e) => {
+		e.preventDefault();
+		this.setState({play:true});
 	}
 	render() {
 		return (
 			<div className={`movie-item movie ${this.props.state.ribbon}`}>
 				<div className='row m-0'>
 					<div className='col-12 col-lg-4'>
-						<figure>
-							<img src={`../${this.props.state.img}`} alt={this.props.state.name} title={this.props.state.name} className='movie-img'/>
-							<figcaption>
-								<span className='ribbon'>
-									<span className='ribbon-text'>
-										{this.props.state.ribbon}
-									</span>
-								</span>
-							</figcaption>
-						</figure>
+						<Moviepost {...this.props}/>
 					</div>
 					<div className='col-12 col-lg-8'>
 						<Movietable state={this.props.state}/>
@@ -35,17 +33,9 @@ class Movieitem extends Component {
 						</a>
 					</div>
 					{ this.props.state.ribbon !== 'bluray' &&
-					<div className='col-12'>
-						<div className='notice'>
-							<p><i className="fa fa-exclamation-triangle pr-1" aria-hidden="true"></i>
-								this movie is not allow bluray beacose he is in cinma
-							</p>
-							<p>
-								copy <strong>bluray</strong> allow in <strong>novmber 2018</strong>
-
-							</p>
+						<div className='col-12'>
+							<Notice />
 						</div>
-					</div>
 					}
 					<div className='col-12'>
 						<div className='description box'>
@@ -58,14 +48,7 @@ class Movieitem extends Component {
 						</div>
 					</div>
 					<div className='col-12'>
-						<div className='trailer box'>
-							<h4 className='title'>
-								trailer
-							</h4>
-							<div className='video content'>
-								<img src={`https://img.youtube.com/vi/${this.props.state.trailer}/hqdefault.jpg`} alt={this.props.state.name} title={this.props.state.name} className='movie-img'/>
-							</div>
-						</div>
+						<Trailer {...this.props} playVideo={this.playVideo} play={this.state.play}/>
 					</div>
 					<div className='col-12'>
 						<div id='download'>download</div>

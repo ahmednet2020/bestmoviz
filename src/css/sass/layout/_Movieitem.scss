@@ -41,15 +41,26 @@
 		background-color: #fff;
 		border: 1px solid $border-color;
 		color: $black-color;
-		.title
-		{
-			padding: 10px;
-			background-color: $white-color;
-			border-bottom: 1px solid $border-color;
-		}
-		.content
-		{
-			padding: 10px;
-		}
+	}
+	.title
+	{
+		padding: 10px;
+		background-color: $white-color;
+		border-bottom: 1px solid $border-color;
+	}
+	.content
+	{
+		position: relative;
+		padding: 10px;
+	}
+	.btn-play
+	{
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    font-size: 2em;
+	    margin: auto;
+	    color: $white-color;
 	}
 }
