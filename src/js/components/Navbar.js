@@ -10,13 +10,18 @@ import Search from './Search'
 import SearchItem from './SearchItem'
 
 class Navbar extends Component {
+	state={
+		search:''
+	}
 	handelClear = (e) => {
 		e.preventDefault();
 		this.props.searchAction('')
+		this.setState({search:''})
 	}
 	handelChange = (e) => {
 		e.preventDefault();
 		this.props.searchAction(e.target.value)
+		this.setState({search:e.target.value})
 	}
 	render() {
 		return (
@@ -32,8 +37,8 @@ class Navbar extends Component {
 					{/*end brand*/}
 					{/*start search form*/}
 					<div className='search' id='Search'>
-						<Search handelChange={this.handelChange} clear={this.handelClear}/>
-						<SearchItem items={this.props.search}/>
+						<Search handelChange={this.handelChange} clear={this.handelClear} value={this.state.search}/>
+						<SearchItem items={this.props.search} location={this.props.location}/>
 					</div>
 					{/*end search form*/}
 					{/*subscribe button*/}
