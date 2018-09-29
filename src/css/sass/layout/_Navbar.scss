@@ -37,6 +37,28 @@ nav
 		height: 300px;
 		overflow: auto;
 	}
+	.item
+	{
+    	display: block;
+		width: 100%;
+		padding: 10px 5px;
+	    border-bottom: 1px solid $border-color;
+	    white-space: nowrap;
+	    color: $text-color;
+	    cursor: pointer;
+	    &:hover,
+	    &:focus
+	    {
+	    	background-color: $main-color3;
+	    	color: $white-color;
+	    }
+	    img
+	    {
+	    	width: 50px;
+    		height: 70px;
+    		margin-right: 10px;
+	    }
+	}
 	.navbar-brand
 	{
 		text-align: right;

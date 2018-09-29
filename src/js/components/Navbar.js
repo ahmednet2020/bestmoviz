@@ -37,8 +37,13 @@ class Navbar extends Component {
 					{/*end brand*/}
 					{/*start search form*/}
 					<div className='search' id='Search'>
-						<Search handelChange={this.handelChange} clear={this.handelClear} value={this.state.search}/>
-						<SearchItem items={this.props.search} location={this.props.location}/>
+						<Search handelChange={this.handelChange}
+							clear={this.handelClear}
+							value={this.state.search}/>
+						<SearchItem 
+							items={this.props.search} 
+							location={this.props.location}
+							/>
 					</div>
 					{/*end search form*/}
 					{/*subscribe button*/}

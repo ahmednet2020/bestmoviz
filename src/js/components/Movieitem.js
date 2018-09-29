@@ -63,8 +63,10 @@ class Movieitem extends Component {
 			</div>
 		);
 	}
-	componentDidMount()
+	scriptRun()
 	{
+		//clear search input 
+		document.getElementById('search-clear').click();
 		window.scrollTo(0,0);
 		let url = window.location.href;
 		let identifier = this.props.state.id;
@@ -96,6 +98,14 @@ class Movieitem extends Component {
 			(d.head || d.body).appendChild(s);
 			})();
 		}             
+	}
+	componentDidUpdate()
+	{
+		this.scriptRun();
+	}
+	componentDidMount()
+	{
+		this.scriptRun();
 	}
 }
 export default Movieitem
