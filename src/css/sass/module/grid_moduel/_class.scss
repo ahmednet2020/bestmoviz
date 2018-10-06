@@ -56,6 +56,11 @@
 {
 	pointer-events: none;
 }
+.star-color
+{
+	color: $star-color;
+	text-shadow: 0 0 4px $white-color;
+}
 // .navbar-toggler
 // {
 // 	&:after

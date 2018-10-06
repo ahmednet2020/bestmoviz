@@ -18,6 +18,7 @@ class MoviesList extends Component {
 		);
 	}
 	componentDidMount() {
+		document.getElementById('search-clear').click();
 		window.scrollTo(0,0);
 	}
 }

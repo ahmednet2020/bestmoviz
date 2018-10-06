@@ -40,7 +40,11 @@ export default function(props){
 						rate
 					</td>
 					<td>
-						{props.state.rate}
+						<i className="fa fa-star fa-2x star-color pr-1" aria-hidden="true">
+						</i>
+						<span>
+							{`${props.state.rate} / 10`}
+						</span>
 					</td>
 				</tr>
 				<tr>

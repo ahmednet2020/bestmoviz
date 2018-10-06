@@ -17,10 +17,14 @@ export default function(props)
 							{props.ribbon}
 						</span>
 					</span>
-					<div  className='movie-title'>
+					<div className='movie-title'>
 						<h5 className='movie-name'>{props.name}</h5>
-						<div className='rate'>{props.rate}</div>
-						<p className='movie-description'>{props.description}</p>
+						<p className='movie-description'>{props.description.substring(0,25)}...</p>
+					</div>
+					<div className='movie-star'>
+						<i className="fa fa-star fa-3x star-color star" aria-hidden="true">
+							<span className='movie-rate'>{props.rate}</span>
+						</i>
 					</div>
 				</figcaption>
 			</figure>

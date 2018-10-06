@@ -13,7 +13,7 @@
     .movie-title
     {
         position: absolute;
-        top: 45%;
+        top: 60%;
         left: 0;
         bottom: 0;
         right: 0;
@@ -29,14 +29,31 @@
     }
     .movie-description
     {
-        height: 25%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    .rate
+    .movie-star
     {
-        padding: 0.5em 0;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        z-index: 9;
+    }
+    .star
+    {
+        position: relative;
+    }
+    .movie-rate
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 0.3em;
+        z-index: 9;
+        color: $black-color;
+        font-weight: 700;
     }
     .ribbon
     {
