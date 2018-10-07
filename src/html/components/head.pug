@@ -19,7 +19,7 @@ meta(name="keyword" content=`${keyword}`)
 //- fonts loop from var 
 - for(let font of fonts)
 	!= `<!--=======================${font.comment}=====================-->`
-	link(href=`${font.href}` rel="stylesheet")
+	link(href=`${font}` rel="stylesheet")
 // css style link
 //- css loop from var 
 - for(let css of globalStyle)

@@ -23,7 +23,7 @@ export default function(props)
 					</div>
 					<div className='movie-star'>
 						<i className="fa fa-star fa-3x star-color star" aria-hidden="true">
-							<span className='movie-rate'>{props.rate}</span>
+							<span className='movie-rate h-style'>{props.rate}</span>
 						</i>
 					</div>
 				</figcaption>

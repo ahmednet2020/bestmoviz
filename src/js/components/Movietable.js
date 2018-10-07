@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function(props){
 	return (
-		<table>
+		<table className='h-style'>
 			<thead>
 				<tr>
 					<th colSpan='2'>
